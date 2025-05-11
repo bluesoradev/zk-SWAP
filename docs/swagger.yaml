@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  title: zkSWAP API
+  version: 1.0.0
+  description: >
+    Public API interface for zkSWAP — a MiCA-compliant DEX on TON  
+    Includes KYC verification flow, refund requests, and token list.
+
+servers:
+  - url: https://zk-swap.com/api
+
+paths:
+  /verify:
+    post:
+      summary: Submit wallet for compliance verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [walletAddress, transactionHash]
+              properties:
+                walletAddress:
+                  type: string
+                transactionHash:
+                  type: string
+                memo:
+                  type: string
+                  description: Must include Payment Identifier
+      responses:
+        '200':
+          description: Verification submitted successfully
+        '400':
+          description: Invalid input or missing memo
+
+  /status:
+    get:
+      summary: Get verification status
+      parameters:
+        - name: wallet
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Current status of verification
+        '404':
+          description: Wallet not found or unverified
+
+  /refund:
+    post:
+      summary: Request refund for unmatched payment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [walletAddress, transactionHash]
+              properties:
+                walletAddress:
+                  type: string
+                transactionHash:
+                  type: string
+      responses:
+        '200':
+          description: Refund request received
+        '404':
+          description: No eligible unmatched payment found
+
+  /tokenlist:
+    get:
+      summary: Get current verified token list
+      responses:
+        '200':
+          description: Token list JSON
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    symbol:
+                      type: string
+                    name:
+                      type: string
+                    address:
+                      type: string
+                    chainId:
+                      type: integer
+                    decimals:
+                      type: integer
+                    logoURI:
+                      type: string
