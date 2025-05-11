@@ -1,0 +1,43 @@
+{
+  "name": "zkSWAP Token List",
+  "timestamp": "2025-05-11T00:00:00Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tokens": [
+    {
+      "name": "Ston Token",
+      "symbol": "STON",
+      "address": "EQDj1234567890abcdefTONSTONExample1",
+      "chainId": 1000,
+      "decimals": 9,
+      "logoURI": "https://zk-swap.com/assets/tokens/ston.png"
+    },
+    {
+      "name": "Wrapped TON",
+      "symbol": "wTON",
+      "address": "EQCwTONexamplewrapped99999999999",
+      "chainId": 1000,
+      "decimals": 9,
+      "logoURI": "https://zk-swap.com/assets/tokens/wton.png"
+    },
+    {
+      "name": "zkSWAP Token",
+      "symbol": "TESTX",
+      "address": "EQDtestxtoken00000000000000000001",
+      "chainId": 1000,
+      "decimals": 9,
+      "logoURI": "https://zk-swap.com/assets/tokens/testx.png"
+    },
+    {
+      "name": "USD Tether (Jetton)",
+      "symbol": "jUSDT",
+      "address": "EQCjusdtbridgedexample11111111",
+      "chainId": 1000,
+      "decimals": 6,
+      "logoURI": "https://zk-swap.com/assets/tokens/jusdt.png"
+    }
+  ]
+}
