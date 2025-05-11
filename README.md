@@ -66,9 +66,9 @@ See: [`docs/compliance/case-study.md`](docs/compliance/case-study.md)
 
 ## 📡 API Access
 
-• `tokenlist.json`: [api/tokenlist.json](api/tokenlist.json)  
-• Swagger (KYC API): [docs/api.swagger.json](docs/api.swagger.json)  
-• Contract Interface: [contracts/zkInterface.sol](contracts/zkInterface.sol)
+• 🪙 Tokenlist (JSON): [api/tokenlist.json](api/tokenlist.json)  
+• 🔌 Swagger (KYC API): [docs/api.swagger.yaml](docs/api.swagger.yaml)  
+• 📄 Contract Interface: [contracts/zkInterface.sol](contracts/zkInterface.sol)
 
 ---
 
