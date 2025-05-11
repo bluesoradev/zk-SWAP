@@ -1,0 +1,35 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "zkSWAP Verification API",
+    "description": "API for KYC flow and compliance triggers."
+  },
+  "paths": {
+    "/verify/{wallet}": {
+      "get": {
+        "summary": "Check KYC status",
+        "parameters": [
+          {
+            "name": "wallet",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "KYC status",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "string" },
+                "fee": { "type": "number" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
