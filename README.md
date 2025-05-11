@@ -1,51 +1,89 @@
-# zkSWAP — Cross-Chain AMM DEX on TON (MiCA-ready, LayerZero powered)
+# zkSWAP — Hybrid AMM DEX on TON with Cross-Chain Support & MiCA Compliance
 
-zkSWAP is a hybrid AMM DEX built natively on the TON blockchain, offering seamless cross-chain swaps via LayerZero and backed by a fully transparent legal framework.
+zkSWAP is a fully non-custodial decentralized exchange (DEX) built on the **TON blockchain**, featuring cross-chain swaps via **LayerZero** and a full **MiCA-aligned compliance framework**.
 
-Unlike most anonymous DeFi projects, zkSWAP positions itself as the first MiCA-compliant DEX with institutional-grade regulatory alignment, user fund protection, and adaptive compliance mechanisms.
-
----
-
-## 🌐 Official Links
-
-- Website: [https://zk-swap.com](https://zk-swap.com)  
-- Medium Article: [zkSWAP: Real Compliance in DeFi](https://medium.com/@stanislav.bagaeeev/zkswap-first-cross-chain-amm-dex-on-ton-with-real-compliance-aec21fc576cc)  
-- Documentation: [GitBook Legal Policy](https://dex-legal.gitbook.io/zkswap-documentation)  
+Unlike most anonymous DeFi platforms, zkSWAP is built with legal infrastructure, regulated risk tiers, and verified token listings — without compromising user wallet control.
 
 ---
 
-## 🧠 Key Features
+## 🚀 Key Features
 
-- 🔄 **Hybrid AMM model** built for TON ecosystem  
-- 🌉 **LayerZero-powered cross-chain swaps** (Ethereum, BSC, Polygon and more)  
-- 🧾 **MiCA-compliant legal structure** with licensing across 5 jurisdictions  
-- 🔐 **KYC system** with risk-based verification flow  
-- 🧮 **Non-custodial** — user assets always stay in user wallets
-
----
-
-## 📑 Regulatory & Compliance Overview
-
-zkSWAP operates under a structured legal and regulatory framework:
-
-- CASP License (Malta)  
-- FCA Cryptoasset Registration (UK)  
-- DPT License (Singapore)  
-- VASP License (El Salvador)  
-- FINMA IP Authorization (Switzerland)  
-- MiCA-ready Token Registration Report  
-- STONKS Global Compliance Policy
-
-🔍 In line with **MiCA Article 68(1)(b)**, zkSWAP may require **paid verification** in flagged cases or for wallets with annual trading volume below $50,000.  
-Minimum verification fee is **1500 USDT**, scaled based on risk and profit metrics.
+- ✅ **TON-native AMM architecture**
+- 🌉 **Cross-chain bridge integration** via LayerZero (ETH, BSC, Polygon)
+- 🔐 **MiCA Article 68(1)(b)** compliant risk-based verification system
+- 🛡️ Non-custodial: All assets remain in user wallets
+- ⚙️ API-accessible token list and contract interface
+- 📑 Fully open-source compliance logic
 
 ---
 
-## 📦 Dev Overview (Interface)
+## 📜 Legal & Licensing
 
-```solidity
-interface IZKSwap {
-    function swapTONtoToken(address token, uint256 amount) external;
-    function swapTokenToTON(address token, uint256 amount) external;
-    function verifyUser(address wallet) external view returns (bool);
-}
+zkSWAP operates with an international regulatory stack:
+
+- CASP License (Malta)
+- FCA Cryptoasset Registration (UK)
+- FINMA Authorization (Switzerland)
+- DPT License (Singapore)
+- VASP License (El Salvador)
+- MiCA Token Report (EU)
+
+Full legal policy: [`docs/legal.md`](docs/legal.md)
+
+---
+
+## 🧠 How Verification Works
+
+Verification is required **only for flagged wallets** and is based on:
+- Abnormal swap activity
+- Low trading history (< $50,000/year)
+- Bridge anomalies or suspected risk patterns
+
+The **minimum fee is 1500 USDT**, and all rules are public.  
+See: [`docs/compliance/case-study.md`](docs/compliance/case-study.md)
+
+---
+
+## 🔗 Official Resources
+
+• 🌐 Website: [https://zk-swap.com](https://zk-swap.com)  
+• 📘 Documentation (GitBook): [https://dex-legal.gitbook.io/zkswap-documentation](https://dex-legal.gitbook.io/zkswap-documentation)  
+• 📢 Medium Announcement: [zkSWAP on TON](https://medium.com/@tonnetwork/zkswap-first-cross-chain-amm-dex-on-ton-with-real-compliance-aec21fc576cc)
+
+---
+
+## 🗃 Documentation Index
+
+• ✅ FAQ: [docs/faq.md](docs/faq.md)  
+• 🧾 Legal Policy: [docs/legal.md](docs/legal.md)  
+• 🔍 Case Study (KYC): [docs/compliance/case-study.md](docs/compliance/case-study.md)  
+• 🔐 Security Overview: [docs/security.md](docs/security.md)  
+• 🧩 Token Listing Policy: [docs/tokenlist.md](docs/tokenlist.md)  
+• 🆚 Comparison with Other TON DEXs: [docs/TON-comparison.md](docs/TON-comparison.md)  
+• ❌ Response to Misinformation: [docs/misinformation-response.md](docs/misinformation-response.md)
+
+---
+
+## 📡 API Access
+
+• `tokenlist.json`: [api/tokenlist.json](api/tokenlist.json)  
+• Swagger (KYC API): [docs/api.swagger.json](docs/api.swagger.json)  
+• Contract Interface: [contracts/zkInterface.sol](contracts/zkInterface.sol)
+
+---
+
+## ⚠️ Important Disclaimer
+
+> zkSWAP (zk-swap.com) is **not affiliated with ZKSwap (zks.org), zkSwap Finance, or zkswap.finance**.  
+> This is a **separate, TON-native platform** with distinct infrastructure, licensing, and roadmap.
+
+---
+
+## 💬 Contact
+
+For support or verification-related requests, use the support section at:  
+[https://t.me/zkSWAP_appbot](https://t.me/zkSWAP_appbot)
+
+---
+
+zkSWAP is redefining what a compliant, secure, and truly decentralized DEX looks like — starting on TON.
