@@ -1,98 +1,122 @@
-# zkSWAP — Hybrid AMM DEX on TON with Cross-Chain Support & MiCA Compliance
+# zkSWAP: A MiCA-Compliant Cross-Chain AMM DEX on TON 🌉
 
-zkSWAP is a fully non-custodial decentralized exchange (DEX) built on the **TON blockchain**, featuring cross-chain swaps via **LayerZero** and a full **MiCA-aligned compliance framework**.
+![zkSWAP Logo](https://via.placeholder.com/150)
 
-Unlike most anonymous DeFi platforms, zkSWAP is built with legal infrastructure, regulated risk tiers, and verified token listings — without compromising user wallet control.
+Welcome to **zkSWAP**, a decentralized exchange (DEX) that prioritizes compliance and innovation. This repository contains the code and resources for a cross-chain automated market maker (AMM) built on the TON blockchain. With LayerZero support and a hybrid regulatory architecture, zkSWAP offers a unique approach to decentralized finance (DeFi).
 
----
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Release%20v1.0.0-brightgreen)](https://github.com/FATAKI1963/zkSWAP/releases)
 
-## 🚀 Key Features
+## Table of Contents
 
-- ✅ **TON-native AMM architecture**
-- 🌉 **Cross-chain bridge integration** via LayerZero (ETH, BSC, Polygon)
-- 🔐 **MiCA Article 68(1)(b)** compliant risk-based verification system
-- 🛡️ Non-custodial: All assets remain in user wallets
-- ⚙️ API-accessible token list and contract interface
-- 📑 Fully open-source compliance logic
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Architecture](#architecture)
+- [Compliance](#compliance)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
----
+## Introduction
 
-## 📜 Legal & Licensing
+zkSWAP aims to bridge the gap between compliance and decentralized finance. As regulations evolve, zkSWAP stands out by adhering to the Markets in Crypto-Assets (MiCA) framework, ensuring that users can trade securely and confidently. This DEX leverages advanced technology to provide seamless cross-chain transactions while maintaining a user-friendly experience.
 
-zkSWAP operates with an international regulatory stack:
+## Features
 
-- CASP License (Malta)
-- FCA Cryptoasset Registration (UK)
-- FINMA Authorization (Switzerland)
-- DPT License (Singapore)
-- VASP License (El Salvador)
-- MiCA Token Report (EU)
+- **Cross-Chain Functionality**: Easily swap assets across different blockchains.
+- **Automated Market Making**: Enjoy liquidity through smart contracts that adjust prices based on supply and demand.
+- **MiCA Compliance**: Operate within legal frameworks to enhance trust and security.
+- **LayerZero Support**: Benefit from enhanced interoperability between different blockchain networks.
+- **Hybrid Regulatory Architecture**: A unique approach that combines decentralized and centralized elements for optimal compliance.
 
-Full legal policy: [`docs/legal.md`](docs/legal.md)
+## Getting Started
 
----
+To get started with zkSWAP, you will need to set up your development environment. This includes installing necessary dependencies and configuring your local setup.
 
-## 🧠 How Verification Works
+### Prerequisites
 
-Verification is required **only for flagged wallets** and is based on:
-- Abnormal swap activity
-- Low trading history (< $50,000/year)
-- Bridge anomalies or suspected risk patterns
+- Node.js (version 14 or higher)
+- npm (Node Package Manager)
+- A code editor (like Visual Studio Code)
+- Basic knowledge of JavaScript and blockchain technology
 
-The **minimum fee is 1500 USDT**, and all rules are public.  
-See: [`docs/compliance/case-study.md`](docs/compliance/case-study.md)
+## Installation
 
----
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/FATAKI1963/zkSWAP.git
+   cd zkSWAP
+   ```
 
-## 🔗 Official Resources
+2. **Install Dependencies**: 
+   ```bash
+   npm install
+   ```
 
-• 🌐 Website: [https://zk-swap.com](https://zk-swap.com)  
-• 📘 Documentation (GitBook): [https://dex-legal.gitbook.io/zkswap-documentation](https://dex-legal.gitbook.io/zkswap-documentation)  
-• 📢 Medium Announcement: [zkSWAP on TON](https://medium.com/@tonnetwork/zkswap-first-cross-chain-amm-dex-on-ton-with-real-compliance-aec21fc576cc)
+3. **Build the Project**: 
+   ```bash
+   npm run build
+   ```
 
----
+4. **Start the Development Server**: 
+   ```bash
+   npm start
+   ```
 
-## 🗃 Documentation Index
+You can now access zkSWAP at `http://localhost:3000`.
 
-• ✅ FAQ: [docs/faq.md](docs/faq.md)  
-• 🧾 Legal Policy: [docs/legal.md](docs/legal.md)  
-• 🔍 Case Study (KYC): [docs/compliance/case-study.md](docs/compliance/case-study.md)  
-• 🔐 Security Overview: [docs/security.md](docs/security.md)  
-• 🧩 Token Listing Policy: [docs/tokenlist.md](docs/tokenlist.md)  
-• 🆚 Comparison with Other TON DEXs: [docs/TON-comparison.md](docs/TON-comparison.md)  
-• ❌ Response to Misinformation: [docs/misinformation-response.md](docs/misinformation-response.md)
+## Usage
 
----
+Once the server is running, you can start trading. The user interface allows you to connect your wallet, select the tokens you wish to swap, and execute trades seamlessly.
 
-## 📡 API Access
+### Key Functions
 
-• 🪙 Tokenlist (JSON): [api/tokenlist.json](api/tokenlist.json)  
-• 🔌 Swagger (KYC API): [docs/api.swagger.yaml](docs/api.swagger.yaml)  
-• 📄 Contract Interface: [contracts/zkInterface.sol](contracts/zkInterface.sol)
+- **Connect Wallet**: Integrate with popular wallets like MetaMask.
+- **Swap Tokens**: Choose from a variety of tokens and execute swaps.
+- **View Transaction History**: Keep track of your trading activities.
 
----
+## Architecture
 
-## ⚠️ Important Disclaimer
+zkSWAP utilizes a modular architecture that separates concerns for better maintainability. The main components include:
 
-> zkSWAP (zk-swap.com) is **not affiliated with ZKSwap (zks.org), zkSwap Finance, or zkswap.finance**.  
-> This is a **separate, TON-native platform** with distinct infrastructure, licensing, and roadmap.
+- **Frontend**: Built with React for a responsive user experience.
+- **Backend**: Node.js handles API requests and interactions with the blockchain.
+- **Smart Contracts**: Written in Solidity, these govern the AMM logic and token swaps.
 
----
+![Architecture Diagram](https://via.placeholder.com/600x400)
 
-## 🧾 Core Compliance Documents
+## Compliance
 
-• ❌ Why zkSWAP is not a scam: [docs/why-not-a-scam.md](docs/why-not-a-scam.md)  
-• 🆚 Comparison with other TON DEX platforms: [docs/TON-comparison.md](docs/TON-comparison.md)  
-• 🔐 Security & risk architecture: [docs/security.md](docs/security.md)  
-• 🪙 Verified token listing policy: [docs/tokenlist.md](docs/tokenlist.md)
+With the evolving landscape of cryptocurrency regulations, zkSWAP is committed to ensuring compliance with MiCA. This includes:
 
----
+- **KYC Procedures**: Implementing Know Your Customer (KYC) protocols to verify user identities.
+- **Transaction Monitoring**: Keeping track of trades to prevent illicit activities.
+- **Reporting**: Providing necessary reports to regulatory bodies as required.
 
-## 💬 Contact
+By following these guidelines, zkSWAP fosters a safe trading environment.
 
-For support or verification-related requests, use the support section at:  
-[https://t.me/zkSWAP_appbot](https://t.me/zkSWAP_appbot)
+## Contributing
 
----
+We welcome contributions from the community. To contribute to zkSWAP:
 
-zkSWAP is redefining what a compliant, secure, and truly decentralized DEX looks like — starting on TON.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a Pull Request.
+
+Please ensure that your code adheres to the existing style and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For questions or feedback, please reach out to us via GitHub issues or email.
+
+For the latest releases, visit [this link](https://github.com/FATAKI1963/zkSWAP/releases) to download and execute the latest version.
+
+Thank you for your interest in zkSWAP! Your support helps us create a compliant and user-friendly decentralized exchange.
