@@ -4,7 +4,7 @@
 
 Welcome to **zkSWAP**, a decentralized exchange (DEX) that prioritizes compliance and innovation. This repository contains the code and resources for a cross-chain automated market maker (AMM) built on the TON blockchain. With LayerZero support and a hybrid regulatory architecture, zkSWAP offers a unique approach to decentralized finance (DeFi).
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Release%20v1.0.0-brightgreen)](https://github.com/FATAKI1963/zkSWAP/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Release%20v1.0.0-brightgreen)](https://github.com/bluesoradev/zkSWAP/releases)
 
 ## Table of Contents
 
@@ -46,7 +46,7 @@ To get started with zkSWAP, you will need to set up your development environment
 
 1. **Clone the Repository**: 
    ```bash
-   git clone https://github.com/FATAKI1963/zkSWAP.git
+   git clone https://github.com/bluesoradev/zkSWAP.git
    cd zkSWAP
    ```
 
@@ -117,6 +117,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or feedback, please reach out to us via GitHub issues or email.
 
-For the latest releases, visit [this link](https://github.com/FATAKI1963/zkSWAP/releases) to download and execute the latest version.
+For the latest releases, visit [this link](https://github.com/bluesoradev/zkSWAP/releases) to download and execute the latest version.
 
 Thank you for your interest in zkSWAP! Your support helps us create a compliant and user-friendly decentralized exchange.
